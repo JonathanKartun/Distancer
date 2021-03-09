@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="50dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/txtCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="none"
+        android:editable="false"
+        android:textIsSelectable="true"
+        android:minHeight="30dp"
+        android:text="Awaiting Location..." />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/lblTypeLocation"
+            android:gravity="center_vertical"
+            android:text="Type Location: "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+		<EditText
+			android:id="@+id/txtTypeLocation"
+			android:layout_width="278.5dp"
+			android:layout_height="match_parent"
+			android:text="Chur"
+			android:inputType="textNoSuggestions" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <Button
+        android:id="@+id/buttSearch"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/beginsearch" />
+        <TextView
+            android:id="@+id/tlblResults"
+            android:text="Results:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+	<EditText
+		android:id="@+id/txtLocationResults"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="12sp"
+        android:inputType="none"
+        android:editable="false"
+        android:textIsSelectable="true"
+		android:layout_marginBottom="66.5dp" />
+</LinearLayout>
