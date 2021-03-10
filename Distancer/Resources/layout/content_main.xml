@@ -32,6 +32,8 @@
 			android:layout_width="278.5dp"
 			android:layout_height="match_parent"
 			android:text="Chur"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
 			android:inputType="textNoSuggestions" />
     </LinearLayout>
     <LinearLayout

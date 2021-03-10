@@ -68,6 +68,16 @@ namespace Distancer
             {
                 SetButtSearchAction();
             };
+
+            txtSearchLocation.EditorAction += TxtSearchLocation_EditorAction;
+        }
+
+        private void TxtSearchLocation_EditorAction(object sender, TextView.EditorActionEventArgs e)
+        {
+            if (e.ActionId == ImeAction.Done && butSearch.Enabled)
+            {
+                SetButtSearchAction();
+            }
         }
 
         void ShowErrorAlert(string message)
@@ -95,8 +105,11 @@ namespace Distancer
 
         void DismissKeyboard()
         {
-            InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
-            inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            if (this.CurrentFocus != null)
+            {
+                InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+                inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            }
         }
 
         async void CheckPermissionAndStartLocationUpdates()
